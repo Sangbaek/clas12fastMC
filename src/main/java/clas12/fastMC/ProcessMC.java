@@ -114,7 +114,7 @@ public class ProcessMC {
         int counter = 0; int counterFW = 0; int counterP = 0;
         ProgressPrintout progress = new ProgressPrintout();
         
-        clas12FastMC.show();
+        //clas12FastMC.show();
         FastMCResponse response = new FastMCResponse();
         
         while(chain.hasNext()==true){
@@ -177,7 +177,7 @@ public class ProcessMC {
         clas12FastMC.addConfiguration(-11, DetectorRegion.FORWARD, "FTOF", 1);
         clas12FastMC.addConfiguration(-11, DetectorRegion.FORWARD, "ECAL", 1);   
         
-        clas12FastMC.show();
+        //clas12FastMC.show();
         //clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "FTOF", 1);
     }
     
