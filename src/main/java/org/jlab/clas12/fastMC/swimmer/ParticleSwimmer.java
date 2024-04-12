@@ -54,7 +54,7 @@ public class ParticleSwimmer {
     
     public ParticleSwimmer(){                
         //this.initMagneticField(-1.0, -1.0);                
-        this.initMagneticFieldResources(-1.0, -1.0);
+        this.initMagneticFieldResources(+1.0, -1.0);
         swimmer = new Swimmer();
     }
     
@@ -82,6 +82,8 @@ public class ParticleSwimmer {
          InputStream    in_torus = getClass().getResourceAsStream(filetorus);
          InputStream in_solenoid = getClass().getResourceAsStream(filesolenoid);
          
+        
+        System.out.println(mf.getCurrentConfigurationMultiLine());
 
         try {
             mf.initializeMagneticFieldsFromFile(in_torus,in_solenoid,filetorus,filesolenoid);

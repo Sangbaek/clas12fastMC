@@ -122,7 +122,7 @@ public abstract class MagneticField implements IMagField {
 	protected int numFieldPoints;
 
 	/** Overall scale factor */
-	protected double _scaleFactor = 1.0;
+	protected double _scaleFactor = -1.0;
 
 	// determine whether we use interpolation or nearest neighbor
 	protected static boolean _interpolate = true;		

@@ -17,10 +17,6 @@ xsecs, pids, pxs, pys, pzs, es, ms, vzs = df.loc[:, ["xsec", "pid", "px", "py", 
 pids = pids.astype(int)
 for i in range(maxlength):
     xsec, pid, px, py, pz, e, m, vz = xsecs[i], pids[i], pxs[i], pys[i], pzs[i], es[i], ms[i], vzs[i]
-    if pid == 13:
-        pid = -211
-    if pid == -13:
-        pid = 211
     vx, vy = 0, 0
     if i%10000==0:
         print(i)

@@ -36,7 +36,7 @@ public class ProcessMC {
     
     EventFilter  mcFilter = new EventFilter();
     EventFilter  outFilter = new EventFilter();
-    Clas12FastMC clas12FastMC = null;//new Clas12FastMC();
+    Clas12FastMC clas12FastMC = new Clas12FastMC();
             
     public ProcessMC(){
         //System.setProperty("JNP_DATA","./");
@@ -156,26 +156,22 @@ public class ProcessMC {
         System.out.println("INITIALIZING FAST MC ");
         clas12FastMC = new Clas12FastMC();
         
-        clas12FastMC.addConfiguration(2212, DetectorRegion.FORWARD,   "DC", 6);
-        clas12FastMC.addConfiguration(2212, DetectorRegion.FORWARD, "FTOF", 1);
         // Different ways you can detect proton
         // This is proton in forward detector
-        clas12FastMC.addConfiguration(211, DetectorRegion.FORWARD,   
-                new DCDetectorLayers(), 36);
-        clas12FastMC.addConfiguration(211, DetectorRegion.FORWARD, "FTOF", 1);
-        
-        clas12FastMC.addConfiguration(-211, DetectorRegion.FORWARD,   
-                new DCDetectorLayers(), 36);
-        clas12FastMC.addConfiguration(-211, DetectorRegion.FORWARD, "FTOF", 1);
-        
-        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, 
-                new DCDetectorLayers(), 36);
-        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "FTOF", 1);
-        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "ECAL", 1);                
                 
+        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD,   "DC", 6);
+        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "FTOF", 1);
+        clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "ECAL", 1);   
+        //clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "FT", 1);   
         clas12FastMC.addConfiguration(-11, DetectorRegion.FORWARD,   "DC", 6);
         clas12FastMC.addConfiguration(-11, DetectorRegion.FORWARD, "FTOF", 1);
         clas12FastMC.addConfiguration(-11, DetectorRegion.FORWARD, "ECAL", 1);   
+        clas12FastMC.addConfiguration(13, DetectorRegion.FORWARD,   "DC", 6);
+        clas12FastMC.addConfiguration(13, DetectorRegion.FORWARD, "FTOF", 1);
+        clas12FastMC.addConfiguration(13, DetectorRegion.FORWARD, "ECAL", 1);   
+        clas12FastMC.addConfiguration(-13, DetectorRegion.FORWARD,   "DC", 6);
+        clas12FastMC.addConfiguration(-13, DetectorRegion.FORWARD, "FTOF", 1);
+        clas12FastMC.addConfiguration(-13, DetectorRegion.FORWARD, "ECAL", 1);   
         
         //clas12FastMC.show();
         //clas12FastMC.addConfiguration(11, DetectorRegion.FORWARD, "FTOF", 1);

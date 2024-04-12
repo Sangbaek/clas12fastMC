@@ -26,7 +26,7 @@ public class Torus extends MagneticField {
 	 */
 	private Torus() {
 		setCoordinateNames("phi", "rho", "z");
-		_scaleFactor = -1; // default
+		_scaleFactor = +1; // default
 		_addedSolenoid = false;
 	}
 	
